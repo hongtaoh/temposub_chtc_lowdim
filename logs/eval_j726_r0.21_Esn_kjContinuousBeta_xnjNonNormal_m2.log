@@ -1,0 +1,43 @@
+000 (6262071.024.000) 2026-04-30 07:32:29 Job submitted from host: <128.105.68.112:9618?addrs=128.105.68.112-9618+[2607-f388-2200-100-eaeb-d3ff-fea3-4202]-9618&alias=ap2001.chtc.wisc.edu&noUDP&sock=schedd_9001_840b>
+...
+040 (6262071.024.000) 2026-04-30 08:41:14 Started transferring input files
+	Transferring to host: <128.105.69.189:9618?addrs=128.105.69.189-9618+[2607-f388-2200-100-1270-fdff-fe56-644c]-9618&alias=e4042.chtc.wisc.edu&noUDP&sock=slot1_22_520542_ade9_7782>
+...
+040 (6262071.024.000) 2026-04-30 08:41:15 Finished transferring input files
+...
+001 (6262071.024.000) 2026-04-30 08:41:15 Job executing on host: <128.105.69.189:9618?addrs=128.105.69.189-9618+[2607-f388-2200-100-1270-fdff-fe56-644c]-9618&alias=e4042.chtc.wisc.edu&noUDP&sock=startd_16784_01a6>
+	SlotName: slot1_22@e4042.chtc.wisc.edu
+	CondorScratchDir = "/var/lib/condor/execute/slot1/dir_3992878/scratch"
+	Cpus = 2
+	Disk = 8388608
+	GPUs = 0
+	IoHeavy = 0
+	Memory = 16384
+...
+006 (6262071.024.000) 2026-04-30 08:41:23 Image size of job updated: 81976
+	81  -  MemoryUsage of job (MB)
+	81976  -  ResidentSetSize of job (KB)
+...
+006 (6262071.024.000) 2026-04-30 08:42:16 Image size of job updated: 252896
+	247  -  MemoryUsage of job (MB)
+	252648  -  ResidentSetSize of job (KB)
+...
+004 (6262071.024.000) 2026-04-30 08:42:16 Job was evicted. Code 1023 Subcode 0
+	(0) CPU times
+		Usr 0 00:00:58, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	6316940  -  Run Bytes Received By Job
+	Reason: via condor_rm (by user hhao9)
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 2         2 
+	   Disk (KB)            :  1621988  8388608   8388608 
+	   GPUs                 :                           0 
+	   IoHeavy              :                           0 
+	   Memory (MB)          :      247    16384     16384 
+	   TimeExecute (s)      :       61                    
+	   TimeSlotBusy (s)     :       62                    
+...
+009 (6262071.024.000) 2026-04-30 08:42:16 Job was aborted.
+	via condor_rm (by user hhao9)
+...
