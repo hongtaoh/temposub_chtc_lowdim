@@ -795,12 +795,22 @@ def generate(
                     pd.concat(FULL_DF, ignore_index=True)
                     .sort_values(by="participant")
                 )
-                true_order_and_stages_dict[filename]["TRUE_SUBTYPE_ASSIGNMENTS"] = list(
-                    full_data["subtype_assignments"]
+                subtype_assignments = [
+                    int(subtype) if bool(diseased) else None
+                    for subtype, diseased in zip(
+                        full_data["subtype_assignments"],
+                        full_data["diseased"],
+                    )
+                ]
+                true_order_and_stages_dict[filename]["TRUE_SUBTYPE_ASSIGNMENTS"] = (
+                    subtype_assignments
                 )
                 true_order_and_stages_dict[filename]["TRUE_STAGE_ASSIGNMENTS"] = list(
                     full_data["stage_assignments"]
                 )
+                true_order_and_stages_dict[filename]["DISEASED_ARR"] = [
+                    int(bool(x)) for x in full_data["diseased"]
+                ]
                 full_data.drop(
                     columns=["subtype_assignments", "stage_assignments"], inplace=True
                 )

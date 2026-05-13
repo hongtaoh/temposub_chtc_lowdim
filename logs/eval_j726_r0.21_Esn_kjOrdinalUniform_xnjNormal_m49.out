@@ -1,0 +1,87 @@
+run_mlhc.sh started at Fri May  1 19:28:15 CDT 2026
+Running in directory: /var/lib/condor/execute/slot1/dir_877916/scratch
+Running with arguments: j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49
+Created logs directory at /var/lib/condor/execute/slot1/dir_877916/scratch/logs
+Extracting environment from /staging/hhao9/env.tar.gz...
+Using extracted environment at .conda_env/bin/python
+=== ENVIRONMENT VALIDATION ===
+Python path: .conda_env/bin/python
+Python version: Python 3.9.25
+📦 Extracting /staging/hhao9/temposub_data.tar.gz...
+=== STARTING MAIN SCRIPT ===
+Current working directory: /var/lib/condor/execute/slot1/dir_877916/scratch
+Processing with j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49
+2026-05-01 19:28:26,332 [INFO] Running j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49
+2026-05-01 19:28:26,340 [INFO] Number of biomarkers: 12
+2026-05-01 19:28:52,779 [INFO] Iteration 1000/10000, Acceptance Ratio: 4.30%, Log Likelihood: 691.1543, 
+2026-05-01 19:29:04,751 [INFO] Iteration 2000/10000, Acceptance Ratio: 2.45%, Log Likelihood: 696.2508, 
+2026-05-01 19:29:17,045 [INFO] Iteration 3000/10000, Acceptance Ratio: 1.63%, Log Likelihood: 696.2508, 
+2026-05-01 19:29:31,751 [INFO] Iteration 4000/10000, Acceptance Ratio: 1.23%, Log Likelihood: 696.2508, 
+2026-05-01 19:29:43,935 [INFO] Iteration 5000/10000, Acceptance Ratio: 1.10%, Log Likelihood: 698.2428, 
+2026-05-01 19:29:55,914 [INFO] Iteration 6000/10000, Acceptance Ratio: 1.03%, Log Likelihood: 701.1775, 
+2026-05-01 19:30:07,898 [INFO] Iteration 7000/10000, Acceptance Ratio: 0.93%, Log Likelihood: 702.1196, 
+2026-05-01 19:30:19,944 [INFO] Iteration 8000/10000, Acceptance Ratio: 0.81%, Log Likelihood: 702.1196, 
+2026-05-01 19:30:31,938 [INFO] Iteration 9000/10000, Acceptance Ratio: 0.76%, Log Likelihood: 699.0889, 
+2026-05-01 19:30:44,007 [INFO] Iteration 10000/10000, Acceptance Ratio: 0.71%, Log Likelihood: 710.6553, 
+2026-05-01 19:30:47,641 [INFO] Starting cleanup ...
+2026-05-01 19:30:47,642 [WARNING] File does not exist, skipping removal: algo_results/pysubebm/heatmaps/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_heatmap.png
+2026-05-01 19:30:47,642 [WARNING] File does not exist, skipping removal: algo_results/pysubebm/traceplots/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_traceplot.png
+2026-05-01 19:30:47,642 [WARNING] File does not exist, skipping removal: algo_results/pysubebm/results/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_results.json
+2026-05-01 19:30:47,642 [WARNING] File does not exist, skipping removal: algo_results/pysubebm/logs/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49.log
+2026-05-01 19:30:47,642 [INFO] Running j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49
+2026-05-01 19:30:47,647 [INFO] Number of biomarkers: 12
+2026-05-01 19:31:11,912 [INFO] Iteration 1000/10000, Acceptance Ratio: 5.60%, Log Likelihood: 399.7124, 
+2026-05-01 19:31:27,792 [INFO] Iteration 2000/10000, Acceptance Ratio: 2.80%, Log Likelihood: 399.7124, 
+2026-05-01 19:31:43,625 [INFO] Iteration 3000/10000, Acceptance Ratio: 1.97%, Log Likelihood: 400.1862, 
+2026-05-01 19:31:59,376 [INFO] Iteration 4000/10000, Acceptance Ratio: 1.77%, Log Likelihood: 412.0091, 
+2026-05-01 19:32:15,749 [INFO] Iteration 5000/10000, Acceptance Ratio: 1.62%, Log Likelihood: 418.9867, 
+2026-05-01 19:32:31,360 [INFO] Iteration 6000/10000, Acceptance Ratio: 1.35%, Log Likelihood: 418.9867, 
+2026-05-01 19:32:46,939 [INFO] Iteration 7000/10000, Acceptance Ratio: 1.19%, Log Likelihood: 418.9987, 
+2026-05-01 19:33:02,524 [INFO] Iteration 8000/10000, Acceptance Ratio: 1.05%, Log Likelihood: 422.0810, 
+2026-05-01 19:33:18,106 [INFO] Iteration 9000/10000, Acceptance Ratio: 0.93%, Log Likelihood: 422.0810, 
+2026-05-01 19:33:33,691 [INFO] Iteration 10000/10000, Acceptance Ratio: 0.84%, Log Likelihood: 422.0810, 
+Failed to find pickle file: algo_results/sustain_gmm/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype0.pickle. Running SuStaIn model for 0 subtype.
+Finding ML solution to 1 cluster problem
+Overall ML likelihood is -4662.213086619191
+Failed to find pickle file: algo_results/sustain_gmm/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype1.pickle. Running SuStaIn model for 1 subtype.
+Splitting cluster 1 of 1
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-4379.98647746]
+Overall ML likelihood is [-4379.98647746]
+Failed to find pickle file: algo_results/sustain_gmm/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype2.pickle. Running SuStaIn model for 2 subtype.
+Splitting cluster 1 of 2
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-4348.52745859]
+Splitting cluster 2 of 2
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-4342.51278511]
+Overall ML likelihood is [-4342.51278511]
+First == Best? False
+First == Pickle ML? True
+Best == Pickle ML? False
+Failed to find pickle file: algo_results/sustain_kde/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype0.pickle. Running SuStaIn model for 0 subtype.
+Finding ML solution to 1 cluster problem
+Overall ML likelihood is -16294.60641995529
+Failed to find pickle file: algo_results/sustain_kde/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype1.pickle. Running SuStaIn model for 1 subtype.
+Splitting cluster 1 of 1
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-12593.26904884]
+Overall ML likelihood is [-12593.26904884]
+Failed to find pickle file: algo_results/sustain_kde/pickle_files/j726_r0.21_Esn_kjOrdinalUniform_xnjNormal_m49_subtype2.pickle. Running SuStaIn model for 2 subtype.
+Splitting cluster 1 of 2
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-10690.66046455]
+Splitting cluster 2 of 2
+ + Resolving 2 cluster problem
+ + Finding ML solution from hierarchical initialisation
+- ML likelihood is [-10963.92751791]
+Overall ML likelihood is [-10690.66046455]
+First == Best? True
+First == Pickle ML? True
+Best == Pickle ML? True
+✅ Script completed at Fri May  1 19:43:23 CDT 2026

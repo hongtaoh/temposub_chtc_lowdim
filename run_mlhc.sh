@@ -12,6 +12,7 @@ export PYTHONNOUSERSITE=1
 # 📂 Prepare directories
 # ==============================================================================
 mkdir -p logs
+
 chmod 755 logs
 echo "Created logs directory at $(pwd)/logs"
 
@@ -53,16 +54,16 @@ fi
 # ==============================================================================
 # 📦 Extract data
 # ==============================================================================
-DATA_TARBALL="/staging/hhao9/temposub_highdim_data.tar.gz"
+DATA_TARBALL="/staging/hhao9/temposub_data.tar.gz"
 
 if [[ -f "$DATA_TARBALL" ]]; then
     echo "📦 Extracting $DATA_TARBALL..."
     tar -xzf "$DATA_TARBALL"
-    # If extraction creates "temposub_highdim_data", rename to "data"
-    if [[ -d "temposub_highdim_data" ]]; then
+    # If extraction creates "temposub_data", rename to "data"
+    if [[ -d "temposub_data" ]]; then
         rm -rf data   # remove old data folder if it exists
-        mv temposub_highdim_data data
-        echo "Renamed temposub_highdim_data -> data"
+        mv temposub_data data
+        echo "Renamed temposub_data -> data"
     fi
 else
     echo "❌ $DATA_TARBALL not found — aborting"
@@ -82,19 +83,5 @@ fi
 echo "=== STARTING MAIN SCRIPT ==="
 TQDM_DISABLE=1 "$PYTHON_EXEC" ./run_mlhc.py "$@"
 
-
-# ==============================================================================
-# 🧹 Cleanup pickle files for this run
-# ==============================================================================
-echo "Cleaning up pickle files for $1"
-
-for d in algo_results/sustain_gmm/pickle_files algo_results/sustain_kde/pickle_files
-do
-    if [[ -d "$d" ]]; then
-        # Use quotes around the path pattern in case of spaces
-        rm -f "$d"/*"$1"* 2>/dev/null
-        echo "Deleted files matching *$1* in $d"
-    fi
-done
 
 echo "✅ Script completed at $(date)"

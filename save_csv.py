@@ -89,9 +89,8 @@ def main():
             kendalls_w = metadata['CONCENTRATION']
             true_orderings = np.array(metadata['TRUE_ORDERINGS'])
             true_subtypes = np.array(metadata['TRUE_SUBTYPE_ASSIGNMENTS'])
-            # true_stages = np.array(metadata['TRUE_STAGE_ASSIGNMENTS'])
-            data_df = pd.read_csv(data_path)
-            diseased_arr = np.array(data_df.diseased)
+            true_stages = np.array(metadata['TRUE_STAGE_ASSIGNMENTS'])
+            diseased_arr = np.array(metadata['DISEASED_ARR'])
             healthy_mask = (diseased_arr == 0)
             diseased_mask = (healthy_mask == 0)
             data_size = len(true_subtypes)
@@ -145,6 +144,7 @@ def main():
                 E_num = GET_E_NUM.get(E_pretty, 0)
 
                 subtype_acc = None
+                stage_mae = None
                 mean_stage_healthy = None
                 runtime_cross_validation = None 
                 absolute_error_n_subtypes = None 
@@ -179,6 +179,7 @@ def main():
                     else:
                         subtype_acc = np.nan
                     
+                    stage_mae = float(np.mean(np.abs(ml_stage - true_stages)))
                     mean_stage_healthy = np.mean(ml_stage[healthy_mask])
                     estimated_n_subtype = rng.integers(1, 7, size = 1)
                     absolute_error_n_subtypes = abs(estimated_n_subtype[0] - n_subtypes)
@@ -196,6 +197,7 @@ def main():
                         'runtime': runtime,
                         'kendalls_tau': kendalls_tau,
                         'subtype_acc': subtype_acc,
+                        'stage_mae': stage_mae,
                         'mean_stage_healthy': mean_stage_healthy,
                         'runtime_cross_validation': runtime_cross_validation,
                         'absolute_error_n_subtypes': absolute_error_n_subtypes,
@@ -208,6 +210,7 @@ def main():
                         subtype_acc = data['subtype_acc']
                     else:
                         subtype_acc = np.nan 
+                    stage_mae = data['stage_mae']
                     mean_stage_healthy = data['mean_stage_healthy']
                 else:
                     kendalls_tau = data['tau_argsort']
@@ -215,6 +218,7 @@ def main():
                         subtype_acc = data['subtype_acc_mcmc']
                     else:
                         subtype_acc = np.nan 
+                    stage_mae = data['stage_mae']
                     mean_stage_healthy = data['mean_stage_healthy_mcmc']
                 runtime = data['runtime']/60
                 # if E_num == 1:
@@ -236,6 +240,7 @@ def main():
                     'runtime': runtime,
                     'kendalls_tau': kendalls_tau,
                     'subtype_acc': subtype_acc,
+                    'stage_mae': stage_mae,
                     'mean_stage_healthy': mean_stage_healthy,
                     'runtime_cross_validation': runtime_cross_validation,
                     'absolute_error_n_subtypes': absolute_error_n_subtypes,

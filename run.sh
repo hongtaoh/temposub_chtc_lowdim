@@ -1,4 +1,4 @@
-# condor_rm hhao9
+condor_rm hhao9
 
 python3 gen_combo.py
 
@@ -20,4 +20,4 @@ done
 #     find "algo_results/$dir" -mindepth 2 -type f -delete
 # done 
 
-condor_submit /home/hhao9/temposub/run_mlhc.sub
+condor_submit /home/hhao9/temposub_lowdim/run_mlhc.sub
